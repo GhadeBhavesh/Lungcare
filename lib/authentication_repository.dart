@@ -26,7 +26,7 @@ class AuthenticationRepository extends GetxController {
   _setInitialScreen(User? user) {
     user == null
         ? Get.offAll(() => const Wellcome())
-        : Get.offAll(() => const HomePage());
+        : Get.to(() => const HomePage());
   }
 
   Future<void> createUserWithEmailAndPassword(
@@ -120,9 +120,8 @@ Future<void> signInWithGoogle() async {
 }
 
 Future<void> signOutGoogle() async {
-
   await googleSignIn.signOut();
-     Get.offAll(() => const Wellcome());
+  await _auth.signOut();
     } 
 }
 // Future<UserCredential> signInWithGoogle(String userEmail, String userPass) async {

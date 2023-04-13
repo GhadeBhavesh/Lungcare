@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:care/authentication_repository.dart';
-
 import 'package:care/home.dart';
 import 'package:care/we.dart';
 import 'dart:async';

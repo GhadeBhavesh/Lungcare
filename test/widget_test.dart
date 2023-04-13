@@ -13,9 +13,8 @@ void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
  // Build our app and trigger a frame.
-    var showHome2 = null;
     await tester.pumpWidget(MyApp(
-      showHome: showHome2,
+      showHome: true,
     ));
 
     // Verify that our counter starts at 0.
