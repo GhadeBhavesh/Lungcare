@@ -210,7 +210,7 @@ class _Doctor_infoState extends State<Doctor_info> {
                     Icon(Icons.location_on, size: 14),
                     SizedBox(width: 5),
                     Text(
-                      'Kokilaben Dhirubhai Ambani Hospital,Mumbai',
+                      'Kokilaben Dhirubhai Ambani Hospital,\nMumbai',
                       style: TextStyle(fontSize: 14, color: Colors.grey[600]),
                     ),
                   ],

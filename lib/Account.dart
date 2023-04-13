@@ -15,7 +15,7 @@ class _AccountState extends State<Account> {
  
   @override
   Widget build(BuildContext context) {
- final user = FirebaseAuth.instance.currentUser!;
+  User? user = FirebaseAuth.instance.currentUser;
     return Scaffold(
      appBar: AppBar(
         title: Text("Profile"),
@@ -24,12 +24,11 @@ class _AccountState extends State<Account> {
       body: Center(
         child: Column(
         children: [
-         
           Container(
             height: 300,
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: NetworkImage('https://i.imgur.com/BoN9kdC.png'),
+                image: user!.photoURL!= null ?  NetworkImage(user.photoURL!): NetworkImage("https://i.imgur.com/BoN9kdC.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -48,7 +47,7 @@ class _AccountState extends State<Account> {
                         width: 2,
                       ),
                       image: DecorationImage(
-                        image: NetworkImage('https://i.imgur.com/BoN9kdC.png'),
+                        image: user!.photoURL!= null ?  NetworkImage(user.photoURL!): NetworkImage("https://i.imgur.com/BoN9kdC.png"),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -58,7 +57,7 @@ class _AccountState extends State<Account> {
                   bottom: 16,
                   left: 132,
                   child: 
-                 Text(user.email!, style: TextStyle(
+                 Text(user!.email!, style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                       fontWeight: FontWeight.bold,

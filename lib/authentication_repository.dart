@@ -120,30 +120,10 @@ Future<void> signInWithGoogle() async {
 }
 
 Future<void> signOutGoogle() async {
- try {
+
   await googleSignIn.signOut();
-      firebaseUser.value != null
-          ? Get.offAll(() => const Wellcome())
-          : Get.to(() => const HomePage());
-          
-    } on FirebaseAuthException catch (e) {
-    Get.snackbar("About user", "User message",
-    
-    backgroundColor: Colors.pink,
-    snackPosition: SnackPosition.BOTTOM,
-    titleText: Text("Account creation failed",
-    style: TextStyle(
-      color: Colors.white 
-    ),),
-    messageText: Text(
-      e.toString(),
-      style: TextStyle(
-        color: Colors.white
-      ),
-    )
-    );
-    }
-  print("User Signed Out");
+     Get.offAll(() => const Wellcome());
+    } 
 }
 // Future<UserCredential> signInWithGoogle(String userEmail, String userPass) async {
 //   // Trigger the authentication flow
@@ -163,4 +143,3 @@ Future<void> signOutGoogle() async {
 //   return await FirebaseAuth.instance.signInWithCredential(credential);
 // }
 //  Future<void> logout() async => await _auth.signOut();
-}
