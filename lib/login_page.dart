@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:care/sign_in.dart';
 import 'package:care/signup_controller.dart';
 import 'package:care/space.dart';
-
+import 'package:care/resetpass.dart';
 class login_page extends StatefulWidget {
   const login_page({super.key});
 
@@ -83,7 +83,13 @@ class _login_pageState extends State<login_page> {
                         Align(
                           alignment: Alignment.centerRight,
                           child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                 Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ResetPass()));
+                          
+                              },
                               child: const Text("Forget Password ?")),
                         ),
                         const SizedBox(

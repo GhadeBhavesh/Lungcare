@@ -153,7 +153,7 @@ bool validatePassword(String passord){
                           return null;
                           }
                           else {
-                            return 'Password must contain special,Number & Capital character';
+                            return 'Password must contain special,\nNumber & Capital character';
                           }
                         }
                       },

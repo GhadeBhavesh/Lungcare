@@ -23,512 +23,521 @@ class _Doctor_infoState extends State<Doctor_info> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-          child: Column(
-        children: [
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
+    return 
+    Scaffold(
+     appBar: AppBar(
+        title: Text("Doctors"),
+        backgroundColor: Colors.pink,
+         leading: Icon(Icons.health_and_safety),
+          elevation: 10,
+      ),
+      body: SingleChildScrollView(
+        child: Container(
             child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr. Vijay Patil.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr. Vijay Patil',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  ' Medical Oncology,Solid Tumor',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Hinduja Hospital,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+          children: [
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr. Vijay Patil.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr. Vijay Patil',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr.suresh_advani.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Suresh Advani',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Jashlok Hospital,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  SizedBox(height: 10),
+                  Text(
+                    ' Medical Oncology,Solid Tumor',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url1);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Hinduja Hospital,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr.kumar Prabhash.webp")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Kumar Prabhash',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Tata Memorial Hospital,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr.suresh_advani.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Suresh Advani',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url2);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr.Sandeep Goyle.webp")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Sandeep Goyle',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Kokilaben Dhirubhai Ambani Hospital,\nMumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url3);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Jashlok Hospital,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url1);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/dr.Vashistha Maniar.webp")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Vashistha Maniar',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Mumbai Oncocare Center,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr.kumar Prabhash.webp")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Kumar Prabhash',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url4);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr. Pritam Kalashar.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr. Pritam Kalashar',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Mumbai Oncocare Center,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url5);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Tata Memorial Hospital,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url2);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/dr-rakesh-jalali.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr. Rakesh Jalali',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Apollo Proton Cancer Centre,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr.Sandeep Goyle.webp")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Sandeep Goyle',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url6);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr.Rajeev-Kumar.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Rajeev Kumar',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Asian Cancer Instiute ,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url7);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Kokilaben Dhirubhai Ambani Hospital,\nMumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url3);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr.Ramesh-Bilimagga.jpg")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr. Ramesh S. Bilimagga',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                  ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Global Hospital ,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/dr.Vashistha Maniar.webp")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Vashistha Maniar',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url8);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Card(
-            margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
-            elevation: 5,
-            child: Column(
-              children: <Widget>[
-                Container(
-                    width: 200,
-                    height: 150,
-                    child: Image.asset("assets/Dr. Amit Joshi .png")),
-                SizedBox(height: 10),
-                Text(
-                  'Dr.Amit Joshi',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  'Medical Oncology',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(Icons.location_on, size: 14),
-                    SizedBox(width: 5),
-                    Text(
-                      'Tata Memorial Hospital,Mumbai',
-                      style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
-                  ],
-                ),
-                TextButton(
-                  onPressed: () {
-                    launch(url2);
-                  },
-                  child: Text("For Appointment"),
-                )
-              ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Mumbai Oncocare Center,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url4);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
             ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-        ],
-      )),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr. Pritam Kalashar.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr. Pritam Kalashar',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Mumbai Oncocare Center,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url5);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/dr-rakesh-jalali.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr. Rakesh Jalali',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Apollo Proton Cancer Centre,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url6);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr.Rajeev-Kumar.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Rajeev Kumar',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Asian Cancer Instiute ,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url7);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr.Ramesh-Bilimagga.jpg")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr. Ramesh S. Bilimagga',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Global Hospital ,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url8);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Card(
+              margin: EdgeInsets.fromLTRB(25, 25, 25, 25),
+              elevation: 5,
+              child: Column(
+                children: <Widget>[
+                  Container(
+                      width: 200,
+                      height: 150,
+                      child: Image.asset("assets/Dr. Amit Joshi .png")),
+                  SizedBox(height: 10),
+                  Text(
+                    'Dr.Amit Joshi',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Medical Oncology',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.location_on, size: 14),
+                      SizedBox(width: 5),
+                      Text(
+                        'Tata Memorial Hospital,Mumbai',
+                        style: TextStyle(fontSize: 14, color: Colors.grey[600]),
+                      ),
+                    ],
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      launch(url2);
+                    },
+                    child: Text("For Appointment"),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+          ],
+        )),
+      ),
     );
     ;
   }

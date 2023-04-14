@@ -13,67 +13,77 @@ class _PredictState extends State<Predict> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-             SizedBox(height: 80,),
-            Container(
-              height: 240,
-              width:250,
-              color: Colors.black12,
-              child: file == null
-                  ? Icon(
-                      Icons.image,
-                      size: 120,
-                    )
-                  : Image.file(
-                      file!,
-                      fit: BoxFit.fill,
+     appBar: AppBar(
+        title: Text("Prediction"),
+        backgroundColor: Colors.pink,
+         leading: Icon(Icons.health_and_safety),
+          elevation: 10,
+      ),
+      body: SingleChildScrollView(
+        child: Expanded(
+          child: Center(
+            child: Column(
+              children: [
+                 SizedBox(height: 80,),
+                Container(
+                  height: 240,
+                  width:250,
+                  color: Colors.black12,
+                  child: file == null
+                      ? Icon(
+                          Icons.image,
+                          size: 120,
+                        )
+                      : Image.file(
+                          file!,
+                          fit: BoxFit.fill,
+                        ),
+                ),
+                SizedBox(height: 80,),
+                    GestureDetector(
+                  onTap: () {
+                      getgall();
+         },
+              child:  Container(
+                height: 30,
+                width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color:  Color.fromARGB(255, 227, 14, 53)
+                  ), 
+                    child: Center(
+                      child: Text(
+                        "Take from Gallery",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
+                  ),),
+                 SizedBox(height: 20,),
+                 GestureDetector(
+                  onTap: () {
+                      getcam();
+         },
+              child:  Container(
+                height: 30,
+                width: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color:  Color.fromARGB(255, 227, 14, 53)
+                  ), 
+                    child: Center(
+                      child: Text(
+                        "Take from Camera",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),)
+              ],
             ),
-            SizedBox(height: 80,),
-                GestureDetector(
-              onTap: () {
-                  getgall();
-   },
-          child:  Container(
-            height: 30,
-            width: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color:  Color.fromARGB(255, 227, 14, 53)
-              ), 
-                child: Center(
-                  child: Text(
-                    "Take from Gallery",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),),
-             SizedBox(height: 20,),
-             GestureDetector(
-              onTap: () {
-                  getcam();
-   },
-          child:  Container(
-            height: 30,
-            width: 200,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                color:  Color.fromARGB(255, 227, 14, 53)
-              ), 
-                child: Center(
-                  child: Text(
-                    "Take from Camera",
-                    style: TextStyle(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),)
-          ],
+          ),
         ),
       ),
     );
