@@ -1,9 +1,10 @@
 # Lungcare
 
-![IMG_20230815_205953](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/14344a6c-b181-4ecf-bd50-be7b0965cd9d)
-![IMG_20230815_205935](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/8343e4ea-f624-411f-8495-b935563c9f68)
-![IMG_20230815_205914](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/55a979cf-e041-4059-bf7a-8f80e67320a8)
-![IMG_20230815_210111](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/ca87ca27-a1ae-4956-9b71-0d4fbd7f7bca)
+
+![IMG_20230815_205953 (1)](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/54e8d559-967b-4662-857f-780af4900be2)
+![IMG_20230815_205935 (1)](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/c59faadd-b3d6-4b1d-baf2-0cc2979b7841)
+![IMG_20230815_205914 (1)](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/b39afb2e-f098-4c41-b0bb-49a5c1094194)
+![IMG_20230815_210111 (1)](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/22c31412-fae5-47e9-94ff-431ccb9f22f3)
 
 ## Getting Started
 
