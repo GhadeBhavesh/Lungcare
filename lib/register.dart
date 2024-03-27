@@ -298,8 +298,8 @@ class _LoginDemoState extends State<_RegisterPage> {
                         ),
                       ),
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.black45,
-                        onPrimary: Colors.white,
+                        backgroundColor: Colors.black45,
+                        // onPrimary: Colors.white,
                         shadowColor: Colors.black45,
                         elevation: 8,
                         //side: BorderSide(color: Colors.white70),

@@ -81,7 +81,7 @@ class _ResetpasswordState extends State<Resetpassword> {
                                 onPressed: () {},
                                 child: const Text("Reset Password"),
                                 style: ElevatedButton.styleFrom(
-                                    primary: Colors.pink,
+                                    backgroundColor: Colors.pink,
                                     elevation: 5,
                                     shape: RoundedRectangleBorder(
                                         borderRadius:

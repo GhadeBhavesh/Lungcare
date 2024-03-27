@@ -9,6 +9,7 @@ import 'package:care/sign_in.dart';
 import 'package:care/signup_controller.dart';
 import 'package:care/space.dart';
 import 'package:care/resetpass.dart';
+
 class login_page extends StatefulWidget {
   const login_page({super.key});
 
@@ -36,7 +37,7 @@ class _login_pageState extends State<login_page> {
                     key: _formKey,
                     child: Column(
                       children: [
-                        SizedBox(
+                        const SizedBox(
                           height: 40,
                         ),
                         Image.asset(
@@ -46,11 +47,10 @@ class _login_pageState extends State<login_page> {
                         TextFormField(
                           controller: controller.userEmail,
                           decoration: const InputDecoration(
-                              prefixIcon:
-                                  const Icon(Icons.person_outline_outlined),
+                              prefixIcon: Icon(Icons.person_outline_outlined),
                               labelText: "Email",
                               hintText: "Email",
-                              border: const OutlineInputBorder()),
+                              border: OutlineInputBorder()),
                         ),
                         const SizedBox(
                           height: 20,
@@ -84,18 +84,17 @@ class _login_pageState extends State<login_page> {
                           alignment: Alignment.centerRight,
                           child: TextButton(
                               onPressed: () {
-                                 Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ResetPass()));
-                          
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => ResetPass()));
                               },
                               child: const Text("Forget Password ?")),
                         ),
                         const SizedBox(
                           height: 20,
                         ),
-                        Container(
+                        SizedBox(
                             width: double.infinity,
                             height: 40,
                             child: ElevatedButton(
@@ -104,12 +103,13 @@ class _login_pageState extends State<login_page> {
                                     controller.userEmail.text.trim(),
                                     controller.userPass.text.trim());
                               },
-                              child: const Text("login"),
                               style: ElevatedButton.styleFrom(
-                                  primary: Colors.pink,
+                                  backgroundColor: Colors.pink,
                                   elevation: 5,
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(40))),
+                              child: const Text("login",
+                                  style: TextStyle(color: Colors.white)),
                             )),
                         const SizedBox(
                           height: 10,
@@ -129,21 +129,21 @@ class _login_pageState extends State<login_page> {
                                 image: AssetImage("assets/google.png"),
                               ),
                               label: const Text("Sign in with Google",
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black)),
                               onPressed: () {
-                                   signInWithGoogle().then((result) {
-          if (result != null) {
-            Navigator.of(context).push(
-              MaterialPageRoute(
-                builder: (context) {
-                  return HomePage();
-                         },
-    ));
-    }
-    });
+                                signInWithGoogle().then((result) {
+                                  if (result != null) {
+                                    Navigator.of(context)
+                                        .push(MaterialPageRoute(
+                                      builder: (context) {
+                                        return const HomePage();
+                                      },
+                                    ));
+                                  }
+                                });
                               },
                             )),
                         const SizedBox(
@@ -154,7 +154,8 @@ class _login_pageState extends State<login_page> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => SignInPage()));
+                                      builder: (context) =>
+                                          const SignInPage()));
                             },
                             child: const Text.rich(TextSpan(children: [
                               TextSpan(

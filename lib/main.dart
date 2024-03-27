@@ -12,8 +12,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initialization(null);
-  Firebase.initializeApp()
-      .then((value) => Get.put(AuthenticationRepository()));
+  Firebase.initializeApp().then((value) => Get.put(AuthenticationRepository()));
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool("showHome") ?? false;
 
@@ -21,12 +20,12 @@ Future main() async {
 }
 
 Future initialization(BuildContext? context) async {
-  await Future.delayed(Duration(seconds: 2));
+  await Future.delayed(const Duration(seconds: 2));
 }
 
 class MyApp extends StatelessWidget {
   final bool showHome;
-  MyApp({
+  const MyApp({
     Key? key,
     required this.showHome,
   }) : super(key: key);
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'lungCare',
       debugShowCheckedModeBanner: false,
-      home: showHome ? Wellcome() : HomePage(),
+      home: showHome ? const Wellcome() : const HomePage(),
     );
   }
 }
@@ -95,6 +94,7 @@ class _onboardpageState extends State<onboardpage> {
           ],
         ),
       );
+  @override
   Widget build(BuildContext context) => Scaffold(
         body: Padding(
           padding: const EdgeInsets.only(bottom: 80),
@@ -128,13 +128,13 @@ class _onboardpageState extends State<onboardpage> {
                   //navigat to home page
                   final prefs = await SharedPreferences.getInstance();
                   prefs.setBool("showHome", true);
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: ((context) => Wellcome())));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: ((context) => const Wellcome())));
                 },
                 style: TextButton.styleFrom(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(0)),
-                    primary: Colors.white,
+                    // primary: Colors.white,
                     backgroundColor: Colors.pink.shade700,
                     minimumSize: const Size.fromHeight(80)),
                 child: const Text(
@@ -149,12 +149,12 @@ class _onboardpageState extends State<onboardpage> {
                   children: [
                     TextButton(
                         onPressed: () => controller.jumpToPage(2),
-                        child: Text("Skip")),
+                        child: const Text("Skip")),
                     Center(
                       child: SmoothPageIndicator(
                         controller: controller,
                         count: 3,
-                        effect: WormEffect(
+                        effect: const WormEffect(
                             spacing: 15,
                             dotColor: Colors.black26,
                             activeDotColor: Colors.pink),
@@ -169,7 +169,7 @@ class _onboardpageState extends State<onboardpage> {
                                   duration: const Duration(milliseconds: 500),
                                   curve: Curves.easeInOut)
                             },
-                        child: Text("Next"))
+                        child: const Text("Next"))
                   ],
                 ),
               ),

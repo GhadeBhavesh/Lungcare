@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-
 class Wellcome extends StatelessWidget {
   const Wellcome({Key? key}) : super(key: key);
 
@@ -16,53 +15,56 @@ class Wellcome extends StatelessWidget {
         body: Center(
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 140,
               ),
-              Text(
+              const Text(
                 "Wellcome",
                 style: TextStyle(
                     fontSize: 30,
                     color: Colors.pink,
                     fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              Text(
+              const Text(
                 "We are here for you",
                 style: TextStyle(
                     fontSize: 30,
                     color: Colors.pink,
                     fontWeight: FontWeight.w500),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Image(image: AssetImage("assets/hu3.png"), height: 250),
-              SizedBox(
+              const Image(image: AssetImage("assets/hu3.png"), height: 250),
+              const SizedBox(
                 height: 30,
               ),
-              Container(
+              SizedBox(
                 width: 200,
                 height: 35,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => login_page()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const login_page()));
                   },
-                  child: Text("Login"),
                   style: ElevatedButton.styleFrom(
                       elevation: 10,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)),
-                      primary: Colors.pink),
+                      backgroundColor: Colors.pink),
+                  child: const Text("Login",
+                      style: TextStyle(color: Colors.white)),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Container(
+              SizedBox(
                 width: 200,
                 height: 35,
                 child: ElevatedButton(
@@ -70,14 +72,15 @@ class Wellcome extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignInPage()));
+                              builder: (context) => const SignInPage()));
                     },
-                    child: Text("Sign In"),
                     style: ElevatedButton.styleFrom(
                         elevation: 10,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30)),
-                        primary: Colors.pink)),
+                        backgroundColor: Colors.pink),
+                    child: const Text("Sign In",
+                        style: TextStyle(color: Colors.white))),
               ),
             ],
           ),

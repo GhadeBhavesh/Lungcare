@@ -13,6 +13,8 @@ import './register.dart';
 import './resetpass.dart';
 
 class Login extends StatefulWidget {
+  const Login({super.key});
+
   @override
   _LoginState createState() => _LoginState();
 }
@@ -22,11 +24,12 @@ class _LoginState extends State<Login> {
   static bool visible = false;
   static bool gvisible = false;
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
-  TextEditingController _emailidController = TextEditingController();
-  TextEditingController _passwordController = TextEditingController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  final TextEditingController _emailidController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
+  @override
   void initState() {
     super.initState();
     visible = false;
@@ -72,7 +75,7 @@ class _LoginState extends State<Login> {
                     child: Center(
                       child: Container(
                           //padding:
-                            //  const EdgeInsets.only(top: 30.0, bottom: 30.0),
+                          //  const EdgeInsets.only(top: 30.0, bottom: 30.0),
                           width: 200,
                           height: 150,
                           decoration: BoxDecoration(
@@ -83,13 +86,13 @@ class _LoginState extends State<Login> {
                   ),
                   Padding(
                     //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
-                    padding: EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
                     child: TextFormField(
                       controller: _emailidController,
                       keyboardType: TextInputType.emailAddress,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.mail_outline_rounded,
                             color: Colors.white70,
                           ),
@@ -102,12 +105,12 @@ class _LoginState extends State<Login> {
                           hintStyle: GoogleFonts.workSans(
                             color: Colors.white54,
                           ),
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: const OutlineInputBorder(
                             //borderRadius: BorderRadius.all(Radius.circular(5.0)),
                             borderSide:
                                 BorderSide(color: Colors.white, width: 0.5),
                           ),
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: const OutlineInputBorder(
                             //borderRadius: BorderRadius.all(Radius.circular(5.0)),
                             borderSide:
                                 BorderSide(color: Colors.white, width: 1.5),
@@ -124,9 +127,9 @@ class _LoginState extends State<Login> {
                       controller: _passwordController,
                       obscureText: !_passwordVisible,
                       keyboardType: TextInputType.visiblePassword,
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.lock_outline_rounded,
                             color: Colors.white70,
                           ),
@@ -151,13 +154,13 @@ class _LoginState extends State<Login> {
                           hintStyle: GoogleFonts.workSans(
                             color: Colors.white54,
                           ),
-                          enabledBorder: OutlineInputBorder(
+                          enabledBorder: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(5.0)),
                             borderSide:
                                 BorderSide(color: Colors.white, width: 0.5),
                           ),
-                          focusedBorder: OutlineInputBorder(
+                          focusedBorder: const OutlineInputBorder(
                             borderRadius:
                                 BorderRadius.all(Radius.circular(5.0)),
                             borderSide:
@@ -167,7 +170,7 @@ class _LoginState extends State<Login> {
                           hintText: ''),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     height: 50,
                     width: 350,
                     // decoration: BoxDecoration(
@@ -188,6 +191,20 @@ class _LoginState extends State<Login> {
                           login();
                         }
                       },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black45,
+                        // onPrimary: Colors.white,
+                        shadowColor: Colors.black45,
+                        elevation: 8,
+                        //side: BorderSide(color: Colors.white70),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          side: const BorderSide(
+                            color: Colors.white70,
+                            width: 2,
+                          ),
+                        ),
+                      ),
                       child: Text(
                         'Login',
                         //style: TextStyle(color: Colors.white, fontSize: 20,),
@@ -195,20 +212,6 @@ class _LoginState extends State<Login> {
                           fontSize: 19,
                           color: Colors.white,
                           fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.black45,
-                        onPrimary: Colors.white,
-                        shadowColor: Colors.black45,
-                        elevation: 8,
-                        //side: BorderSide(color: Colors.white70),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          side: BorderSide(
-                            color: Colors.white70,
-                            width: 2,
-                          ),
                         ),
                       ),
                     ),
@@ -219,17 +222,18 @@ class _LoginState extends State<Login> {
                       maintainState: true,
                       visible: visible,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
                           child: Container(
                               width: 320,
-                              margin: EdgeInsets.only(),
+                              margin: const EdgeInsets.only(),
                               child: LinearProgressIndicator(
                                 minHeight: 2,
                                 backgroundColor: Colors.blueGrey[800],
                                 valueColor:
-                                    AlwaysStoppedAnimation(Colors.white),
+                                    const AlwaysStoppedAnimation(Colors.white),
                               )))),
-                  Container(
+                  SizedBox(
                     height: 30,
                     width: 300,
                     child: TextButton(
@@ -254,7 +258,7 @@ class _LoginState extends State<Login> {
                   Container(
                     height: 60,
                     width: 350,
-                    padding: EdgeInsets.only(top: 10),
+                    padding: const EdgeInsets.only(top: 10),
                     // decoration: BoxDecoration(
                     //     color: Colors.deepPurple[900],
                     //     borderRadius: BorderRadius.circular(30)),
@@ -265,11 +269,26 @@ class _LoginState extends State<Login> {
                         });
                         googleSignIn(context);
                       },
+                      style: ElevatedButton.styleFrom(
+                        // primary: Colors.black45,
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.transparent,
+                        shadowColor: Colors.black45,
+                        elevation: 8,
+                        //side: BorderSide(color: Colors.white70,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                          side: const BorderSide(
+                            color: Colors.white70,
+                            width: 2,
+                          ),
+                        ),
+                      ),
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                         child: Row(
                           children: <Widget>[
-                            Image(
+                            const Image(
                               image: AssetImage("assets/google_logo.png"),
                               height: 30.0,
                             ),
@@ -291,21 +310,6 @@ class _LoginState extends State<Login> {
                           ],
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        // primary: Colors.black45,
-                        primary: Colors.transparent,
-                        onPrimary: Colors.white,
-                        shadowColor: Colors.black45,
-                        elevation: 8,
-                        //side: BorderSide(color: Colors.white70,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          side: BorderSide(
-                            color: Colors.white70,
-                            width: 2,
-                          ),
-                        ),
-                      ),
                     ),
                   ),
                   Visibility(
@@ -314,17 +318,18 @@ class _LoginState extends State<Login> {
                       maintainState: true,
                       visible: gvisible,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
                           child: Container(
                               width: 320,
-                              margin: EdgeInsets.only(bottom: 20),
+                              margin: const EdgeInsets.only(bottom: 20),
                               child: LinearProgressIndicator(
                                 minHeight: 2,
                                 backgroundColor: Colors.blueGrey[800],
                                 valueColor:
-                                    AlwaysStoppedAnimation(Colors.white),
+                                    const AlwaysStoppedAnimation(Colors.white),
                               )))),
-                  Container(
+                  SizedBox(
                     height: 30,
                     child: TextButton(
                       onPressed: () {
@@ -361,11 +366,14 @@ class _LoginState extends State<Login> {
       formState.save();
       try {
         await auth.signInWithEmailAndPassword(
-            email: _emailidController.text.trim(), password: _passwordController.text.trim());
+            email: _emailidController.text.trim(),
+            password: _passwordController.text.trim());
 
         SchedulerBinding.instance.addPostFrameCallback((_) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => const HomePage()));
           //visible=!visible;
         });
 
@@ -375,7 +383,6 @@ class _LoginState extends State<Login> {
         setState(() {
           visible = load(visible);
         });
-       
       }
     }
   }
@@ -406,8 +413,10 @@ class _LoginState extends State<Login> {
         _formKey.currentState!.save();
 
         SchedulerBinding.instance.addPostFrameCallback((_) {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (BuildContext context) => HomePage()));
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => const HomePage()));
         });
         displayToastMessage('Account Created', context);
       } else {
@@ -420,7 +429,6 @@ class _LoginState extends State<Login> {
       setState(() {
         gvisible = load(gvisible);
       });
-     
     }
   }
 
