@@ -7,7 +7,8 @@
 ![IMG_20230815_210111 (1)](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/22c31412-fae5-47e9-94ff-431ccb9f22f3)
 ![IMG_20230815_210028](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/88c9f0b5-bea2-417b-a80d-db3217482baf)
 ![IMG_20230815_210049](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/909cd190-bc2c-42d9-a346-1d6c6ccd2cd3)
-![WhatsApp Image 2023-08-17 at 20 09 41](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/86521004-a6e3-4364-b65f-aa8ea89dbb07)
+![WhatsApp Image 2024-03-27 at 11 49 23_da7fd96e](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/3afe0774-bfbb-4231-bbd5-2115e4a746e5)
+![WhatsApp Image 2024-03-27 at 11 48 08_49de4a8a](https://github.com/GhadeBhavesh/Lungcare/assets/108714917/d7062471-44ad-4060-bd0f-24db103d41e7)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
