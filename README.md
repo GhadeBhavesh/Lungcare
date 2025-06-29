@@ -1,4 +1,4 @@
-#📱 LungCare - Lung Cancer Prediction App
+# 📱 LungCare - Lung Cancer Prediction App
 
 LungCare is a mobile application designed to help users predict the possibility of lung cancer at an early stage.
 By simply uploading a CT scan image, the app analyzes the image and compares it with a trained medical image dataset, providing an instant prediction whether the lung is cancerous or non-cancerous.
